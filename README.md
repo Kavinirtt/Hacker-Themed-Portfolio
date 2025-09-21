@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Hacker-Themed-Portfolio
-A sleek, hacker-inspired portfolio website built with a dark terminal-like UI and a glowing green neon theme. Perfect for developers who love the cyberpunk / hacker aesthetic and want to showcase their projects, skills, and contact details in a stylish way.
-=======
 # 🚀 Kavin Kumar - Full Stack Developer Portfolio
 
 A modern, cyberpunk-themed portfolio website showcasing my skills, experience, and achievements as a Full Stack Developer. Built with pure HTML, CSS, and JavaScript for optimal performance and stunning visual effects.
@@ -208,4 +204,3 @@ This project is open source and available under the [MIT License](LICENSE).
 **Built with ❤️ by Kavin Kumar**
 
 *Full Stack Developer | Angular | NestJS | Node.js | Mobile Development*
->>>>>>> master
