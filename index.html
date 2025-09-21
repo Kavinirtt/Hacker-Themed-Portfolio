@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kavin's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">KAVIN</div>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact-terminal" class="nav-link">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar for Mobile -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Dummy Sections -->
+  < <section id="about" class="about-section">
+    <div class="about-content-wrapper">
+      
+      <!-- Profile -->
+      <div id="profile-container">
+        <div id="profile-flip">
+          <div class="profile-face front">
+            <img src="assets/frontside.jpg" alt="Frontside">
+          </div>
+          <div class="profile-face back">
+            <img src="assets/backside.jpeg" alt="Backside">
+          </div>
+          <div class="binary-overlay"></div>
+        </div>
+      </div>
+
+      <!-- About Text -->
+      <div id="about-content">
+        <h2 id="role">Full-Stack Developer 🚀</h2>
+        <h3 id="experienceStat">1+ Years of Experience</h3>
+        <p id="bio">
+          Hello, I'm <span class="name">Kavin Kumar</span>.<br>
+          A passionate and results-driven Full Stack Developer with hands-on experience in modern web development and automation testing. 
+          I specialize in creating scalable, high-performance applications that deliver exceptional user experiences.
+          <br><br>
+          With expertise in both frontend and backend technologies, I've successfully delivered 
+          <span class="highlight">05+ innovative projects</span> including real-time tracking systems, geo-fencing applications, 
+          and dynamic web platforms. <br><br>
+          My proficiency in mobile automation with <span class="highlight">Appium</span>, combined with strong database 
+          management skills using <span class="highlight">MySQL</span> and modern frameworks, enables me to build robust, 
+          end-to-end solutions that drive business growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section">
+  <div class="section-content">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="experience-cards" role="list">
+      <!-- Card 1 -->
+      <article class="exp-card" tabindex="0" role="listitem" aria-labelledby="exp1-title">
+        <div class="exp-card-inner">
+          <div class="exp-card-front">
+            <h3 id="exp1-title">Full Stack Developer</h3>
+            <p class="company">Finstein Advisory Service LLP</p>
+          </div>
+          <div class="exp-card-back">
+            <h4 class="date">JAN 2024 - Current</h4>
+            <ul>
+              <li>Developed and maintained 5+ web apps using Angular, NestJS, Node.js, MySQL</li>
+              <li>Implemented automated testing with Appium for mobile apps</li>
+              <li>Collaborated with cross-functional teams for high-quality solutions</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="exp-card" tabindex="0" role="listitem" aria-labelledby="exp2-title">
+        <div class="exp-card-inner">
+          <div class="exp-card-front">
+            <h3 id="exp2-title">Automation Tester</h3>
+            <p class="company">Finstein Advisory Service LLP</p>
+          </div>
+          <div class="exp-card-back">
+            <h4 class="date">OCT 2023 - DEC 2023</h4>
+            <ul>
+              <li>Designed & implemented cross-platform automation with Appium</li>
+              <li>Applied JSON-driven test data strategy for scalability</li>
+              <li>Worked with developers to ensure quality deliverables</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="exp-card" tabindex="0" role="listitem" aria-labelledby="exp3-title">
+        <div class="exp-card-inner">
+          <div class="exp-card-front">
+            <h3 id="exp3-title">Trainee Software Developer</h3>
+            <p class="company">Finstein Advisory Service LLP</p>
+          </div>
+          <div class="exp-card-back">
+            <h4 class="date">JUL 2023 - SEP 2023</h4>
+            <ul>
+              <li>Learned core concepts of HTML, CSS, JS</li>
+              <li>Assisted in building small-scale apps</li>
+              <li>Contributed to docs & bug fixes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Link CSS & JS from your page (or include in head/body as needed) -->
+<link rel="stylesheet" href="experience.css">
+<script defer src="experience.js"></script>
+
+  <section id="skills" class="skills-section section" aria-labelledby="skills-title">
+  <canvas id="skillsMatrix" aria-hidden="true"></canvas>
+
+  <div class="section-content skills-content">
+    <h2 id="skills-title" class="section-title">Skills</h2>
+
+    <!-- Category: Frontend -->
+    <div class="skills-category" data-category="frontend">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-frontend">
+        <h3 class="cat-title">Frontend Development</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+
+      <div id="cat-frontend" class="cat-body" role="region" aria-labelledby="frontend">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/angular-logo.png" alt="Angular logo" />
+            <span>Angular (15, 18, 20)</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/react-logo.png" alt="React logo" />
+            <span>React</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/primeng-logo.png" alt="PrimeNG logo" />
+            <span>PrimeNG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Mobile -->
+    <div class="skills-category" data-category="mobile">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-mobile">
+        <h3 class="cat-title">Mobile</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+      <div id="cat-mobile" class="cat-body" role="region">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/ionic-logo.png" alt="Ionic logo" />
+            <span>Ionic Framework</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Backend -->
+    <div class="skills-category" data-category="backend">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-backend">
+        <h3 class="cat-title">Backend Development</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+      <div id="cat-backend" class="cat-body" role="region">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/nestjs-logo.png" alt="NestJS logo" />
+            <span>NestJS</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/nodejs-logo.png" alt="Node.js logo" />
+            <span>Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Database -->
+    <div class="skills-category" data-category="db">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-db">
+        <h3 class="cat-title">Database</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+      <div id="cat-db" class="cat-body" role="region">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/mysql-logo.png" alt="MySQL logo" />
+            <span>MySQL</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/postgres-logo.png" alt="Postgres logo" />
+            <span>Postgres</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Cloud -->
+    <div class="skills-category" data-category="cloud">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-cloud">
+        <h3 class="cat-title">Cloud</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+      <div id="cat-cloud" class="cat-body" role="region">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/aws-logo.jpeg" alt="AWS logo" />
+            <span>AWS Services</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Tools -->
+    <div class="skills-category" data-category="tools">
+      <button class="cat-toggle" aria-expanded="false" aria-controls="cat-tools">
+        <h3 class="cat-title">Tools</h3>
+        <span class="chev" aria-hidden="true">▾</span>
+      </button>
+      <div id="cat-tools" class="cat-body" role="region">
+        <div class="skills-grid">
+          <div class="skill-item" tabindex="0">
+            <img src="assets/github-logo.jpg" alt="GitHub logo" />
+            <span>GitHub</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/jira-logo.png" alt="Jira logo" />
+            <span>Jira</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/vscode-logo.png" alt="VS Code logo" />
+            <span>VS Code</span>
+          </div>
+          <div class="skill-item" tabindex="0">
+            <img src="assets/cursor-logo.png" alt="Cursor logo" />
+            <span>Cursor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="projects" class="section">
+  <div class="section-content projects-content">
+    <h2 class="section-title glitch" data-text="Projects">Projects</h2>
+
+    <div class="projects-intro">
+      <p class="projects-domains">
+        Domains: <span class="highlight">B2C</span>, 
+        <span class="highlight">LMS</span>, 
+        <span class="highlight">Attendance Management System</span>, 
+        <span class="highlight">Automation Testing</span>
+      </p>
+      <p class="projects-note">
+        Below are highlight features with brief implementation notes. Click the arrows to expand.
+      </p>
+    </div>
+
+    <div class="features-accordion" id="featuresAccordion">
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Location Tracking</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Real-time GPS tracking with optimized polling intervals and batching. Implemented device permission guards and background updates using web workers / mobile background tasks.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>GeoFencing</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Polygon and circular geofences with server-side checks. Triggered entry/exit events push notifications and activity logs via webhook queue.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Essl and ZKT Devices</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Integrated biometric devices through vendor SDKs and REST bridges. Normalized punch data, deduplicated late/duplicate events, and synced to attendance core.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Face Match</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Client-side capture with liveness checks; server-side vector comparison (cosine similarity). Private storage and salted hashing for biometric templates.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Cron Jobs</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Scheduled tasks using NestJS Schedule/Quartz-like cadence for rollups, report generation, and cleanup; idempotent jobs guarded by distributed locks.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>QR</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Secure QR generation (short-lived) for check-ins and deep-links. Scanner with debounce and offline queue for later sync.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Payment Integration</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Integrated payment gateways with server-verified webhooks, HMAC signature validation, and retry-safe order updates.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Dashboard</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Role-based dashboards with lazy-loaded widgets, server-driven config, and cached queries for fast time-to-first-paint.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>Report Scheduler</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Automated reports with multi-channel delivery: WhatsApp message, Email, In-app notifications, and Push notifications with user preferences.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>MQTT Service</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Real-time messaging via MQTT for location updates and device events. Topic design per tenant/device with auth-based access control.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>SQLite</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Offline-first local cache using SQLite on mobile, with conflict resolution and background sync jobs.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <button class="feature-toggle" aria-expanded="false">
+          <span>pgvector</span>
+          <span class="arrow">▸</span>
+        </button>
+        <div class="feature-content" hidden>
+          <p>Similarity search with pgvector for embeddings, powering face match, semantic search, and recommendation features.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="section">
+  <!-- Binary Stream Canvas -->
+  <canvas id="achievementsStream"></canvas>
+  <!-- Hacker Pulse Effect -->
+  <div class="hacker-pulse" aria-hidden="true"></div>
+
+  <div class="section-content achievements-content">
+    <h2 class="section-title glitch" data-text="Achievements">Achievements</h2>
+
+    <!-- Web View: Static Images -->
+    <div class="achievements-gallery web-view">
+      <div class="achievement-media">
+        <img src="assets/hackathon_winning.jpeg" alt="Hackathon Winning Achievement" />
+        <div class="achievement-caption">
+          <h3>Hackathon Winner</h3>
+          <p>5-day LMS challenge victory with rapid iterations and stakeholder demos</p>
+        </div>
+      </div>
+      
+      <div class="achievement-media">
+        <img src="assets/lung_carcinoma_team.jpeg" alt="Lung Carcinoma Team Project" />
+        <div class="achievement-caption">
+          <h3>Data Visualization Team</h3>
+          <p>Lung Carcinoma analysis using Kaggle datasets for organizational awareness</p>
+        </div>
+      </div>
+      
+      <div class="achievement-media">
+        <img src="assets/lung_caricinoma.jpeg" alt="Lung Carcinoma Visualization" />
+        <div class="achievement-caption">
+          <h3>Medical Data Insights</h3>
+          <p>Clear insights and impactful visuals for healthcare awareness</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile View: Vertical Image Layout -->
+    <div class="achievements-mobile mobile-view">
+      <div class="achievement-mobile-item">
+        <img src="assets/hackathon_winning.jpeg" alt="Hackathon Winning Achievement" />
+        <div class="achievement-mobile-caption">
+          <h3>Hackathon Winner</h3>
+          <p>5-day LMS challenge victory with rapid iterations and stakeholder demos</p>
+        </div>
+      </div>
+      
+      <div class="achievement-mobile-item">
+        <img src="assets/lung_carcinoma_team.jpeg" alt="Lung Carcinoma Team Project" />
+        <div class="achievement-mobile-caption">
+          <h3>Data Visualization Team</h3>
+          <p>Lung Carcinoma analysis using Kaggle datasets for organizational awareness</p>
+        </div>
+      </div>
+      
+      <div class="achievement-mobile-item">
+        <img src="assets/lung_caricinoma.jpeg" alt="Lung Carcinoma Visualization" />
+        <div class="achievement-mobile-caption">
+          <h3>Medical Data Insights</h3>
+          <p>Clear insights and impactful visuals for healthcare awareness</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden data source -->
+    <div id="achievementsData" style="display:none">
+      <div class="achievement-data" data-img="assets/achievement_1.jpg"
+        data-text="Winning a hackathon by actively participating in a 5-day LMS challenge — built to spec, rapid iterations, stakeholder demos, and end-to-end delivery."></div>
+      <div class="achievement-data" data-img="assets/achievement_3.jpg"
+        data-text="Data visualization for Lung Carcinoma using Kaggle datasets — crafted to raise awareness across the organization with clear insights and impactful visuals."></div>
+    </div>
+  </div>
+</section>
+
+<!-- contact-terminal.html -->
+<section id="contact-terminal" class="contact-terminal">
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <span class="btn red"></span>
+      <span class="btn yellow"></span>
+      <span class="btn green"></span>
+    </div>
+    <div class="terminal-title">kavin@portfolio:~$</div>
+  </div>
+  
+  <div class="terminal-body">
+    <h2 class="contact-title glitch-text" data-text="[ Contact Me ]">[ Contact Me ]</h2>
+    
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <img src="assets/gmail-logo.jpg" alt="Email" />
+        </div>
+        <div class="contact-info">
+          <span class="prompt">></span>
+          <span class="command">Email:</span>
+          <a href="mailto:kavingce1914@gmail.com" class="contact-link">kavingce1914@gmail.com</a>
+          <span class="cursor">█</span>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <img src="assets/linkedin-logo.png" alt="LinkedIn" />
+        </div>
+        <div class="contact-info">
+          <span class="prompt">></span>
+          <span class="command">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/kavinkumarr01/" target="_blank" class="contact-link">linkedin.com/in/kavinkumarr01/</a>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <img src="assets/github-logo.jpg" alt="GitHub" />
+        </div>
+        <div class="contact-info">
+          <span class="prompt">></span>
+          <span class="command">GitHub:</span>
+          <a href="https://github.com/kavinirtt" target="_blank" class="contact-link">github.com/kavinirtt</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="terminal-footer">
+      <span class="prompt">kavin@portfolio:~$</span>
+      <span class="cursor-blink">█</span>
+    </div>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
